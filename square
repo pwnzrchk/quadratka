@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main ()
+{
+    double a, b, c; //коэффы ур-ния
+    cout << " Введите коэффициенты a, b и c вашего уравнения\n ";
+    cin >> a >> b >> c;
+    
+    if ( a == 0 )
+        cout << " Это не квадратное уравнение\n";
+    
+    else if (b*b-4*a*c > 0)
+    {
+        double d = b*b-4*a*c;
+        double x1 = (-b + sqrt(d)) / 2*a;
+        double x2 = (-b - sqrt (d)) / 2*a;
+        cout << "Первый корень x1 = " << x1 << " второй корень x2 = " << x2;
+    }
+    else if ( b*b-4*a*c == 0 )
+    {
+        double x12 = (-1)*b/(2*a);
+        cout << "Единственный корень х12 = " << x12 << endl;
+    }
+    else
+        cout << "Корням хуйма"<< endl;
+    return 0;
+}
