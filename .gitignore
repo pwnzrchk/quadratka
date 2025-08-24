@@ -1,10 +1,10 @@
-# macOS системные файлы
+
 .DS_Store
 
-# VS Code рабочие файлы
+
 .vscode/
 
-# Компиляция C/C++
+
 *.o
 *.out
 *.exe
@@ -12,13 +12,13 @@
 *.so
 *.dll
 
-# Логи и временные файлы
+
 *.log
 *.tmp
 *.swp
 *.swo
 
-# CMake сборка
+
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
