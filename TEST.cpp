@@ -48,14 +48,14 @@ int oneTest (double a, double b, double c, double x1ref, double x2ref, double nu
 
 int RunTest() {
     int failed = 0;
-    failed += 1*oneTest (1, -5, 6, 2, 3, 2);
-    failed += 2*oneTest (1, -5, 4, 8, 4, 2);
-    failed += 3*oneTest (1, -3, 2, 1, 2, 2);
-    failed += 4*oneTest (1, -7, 12, 3, 4, 2);
-    failed += 5*oneTest (1, 3, -4, -4, 1, 2);
-    failed += 6*oneTest (1, -13, 12, 1, 12, 2);
-    failed += 7*oneTest (1, -2, 1, 1, NAN, 1);
-    failed += 8*oneTest (576, 48, 84, NAN, NAN, 0);
-    failed += 9*oneTest (-1, 0, 0, 0, NAN, 1);
+    failed += oneTest (1, -5, 6, 2, 3, 2);
+    failed += oneTest (1, -5, 4, 1, 4, 2);
+    failed += oneTest (1, -3, 2, 1, 2, 2);
+    failed += oneTest (1, -7, 12, 3, 4, 2);
+    failed += oneTest (1, 3, -4, -4, 1, 2);
+    failed += oneTest (1, -13, 12, 1, 12, 2);
+    failed += oneTest (1, -2, 1, 1, NAN, 1);
+    failed += oneTest (576, 48, 84, NAN, NAN, 0);
+    failed += oneTest (-1, 0, 0, 0, NAN, 1);
     return failed;
     }

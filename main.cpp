@@ -17,7 +17,6 @@ int main (void)
     printf ("Введите коэффициенты квадратного уравнения a, b и c \n");
     int num = scanf ("%lf %lf %lf", &a, &b, &c);
 
-    //int RunTest(void);
     int mistakes = RunTest();
 
     if (num != 3)
