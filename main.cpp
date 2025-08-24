@@ -17,14 +17,15 @@ int main (void)
     printf ("Введите коэффициенты квадратного уравнения a, b и c \n");
     int num = scanf ("%lf %lf %lf", &a, &b, &c);
 
-    int mistakes = RunTest();
+
 
     if (num != 3)
     {
         printf("\nERROR INPUT\n\n");
     }
 
-    if (num == 3 && mistakes == 0) {
+    int mistakes = RunTest();
+    if (mistakes == 0) {
     int nRoots = solveSquareEquation(a, b, c, &x1, &x2);
 
     x1 = zeroing(x1);
