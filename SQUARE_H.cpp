@@ -63,16 +63,16 @@ int solveSquareEquation (double a, double b, double c, double *x1, double *x2)
         }
 
     }
-        double d = sqrt(disc(a,b,c));
-         if (d>0) {
-             *x1 = (-b-d)/(2*a);
-             *x2 = (-b+d)/(2*a);
-             return TWO;
-            } if (isEqual(d,0)) {
-                *x1 = -b/(2*a);
-                *x2 = NAN;
-                return ONE;
-            } else {
-             return NO;
-             }
+     double d = sqrt(disc(a,b,c));
+    if (d>0) {
+        *x1 = (-b-d)/(2*a);
+        *x2 = (-b+d)/(2*a);
+        return TWO;
+    } if (isEqual(d,0)) {
+        *x1 = -b/(2*a);
+        *x2 = NAN;
+        return ONE;
+    } else {
+        return NO;
+    }
 }
