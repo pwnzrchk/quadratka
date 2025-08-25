@@ -11,3 +11,4 @@ double zeroing (double a)
     return a;
     }
 }
+// Makefile
