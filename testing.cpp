@@ -60,10 +60,10 @@ int allTests (void) {
 
     for (int i = 0; i < TASKI; i++) {
 
-    if (OneTest (TASKS[i]) != 0) {
-        printf("Failed test N%d\n", i);
-        return 1;
-    }
+        if (OneTest (TASKS[i]) != 0) {
+            printf("Failed test N%d\n", i);
+            return 1;
+        }
     }
     return 0;
 }

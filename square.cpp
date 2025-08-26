@@ -5,7 +5,7 @@
 const double e = 1.0e-10;
 const int ONE = 1;
 const int TWO = 2;
-const int NO = 0;
+const int NO = 0; //enum
 const int INF = -1;
 
 int isEqual (double smpl_a, double smpl_b)
@@ -76,3 +76,6 @@ int solveSquareEquation (double a, double b, double c, double * x1, double * x2)
         return NO;
     }
 }
+
+//is equal, zeroing, makefile, условная компиляция, логику упросить(isNAN), рефакторинг программы
+//указатели массивы структуры, scanf читать, infdef

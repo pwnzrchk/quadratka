@@ -26,8 +26,8 @@ void output(double a, double b, double c, double * x1, double *x2) {
                     if (m != 1 || accuracy > 6 || accuracy < 0) {
                         printf("Error input\n");
                     } else {
-                    printf ("x=%.*lf\n", accuracy, *x1);
-                    printf ("\nquantity of roots - %d \n", nRoots);
+                        printf ("x=%.*lf\n", accuracy, *x1);
+                        printf ("\nquantity of roots - %d \n", nRoots);
                     }
                     break;
 
@@ -52,13 +52,3 @@ void output(double a, double b, double c, double * x1, double *x2) {
 
     }
 }
-// int(float,double, FILE) * pointer_name
-//printf("%f", poin)
-//1213f3
-// func(x) change * pointer, not copy
-// int pointer 212f202012
-// pointer + 1 = 212f202012 + sizeof int
-// delta pointer = sizeof int
-// int array[20] == pointer
-// malloc() calloc()  free()
-// array[0] = * array
