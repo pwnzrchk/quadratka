@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include "zero.h"
 #include "square.h"
 #include "testing.h"
 #include "output.h"
@@ -11,7 +10,6 @@ int main (void)
     if (allTests() == 0 ) {
 
         int ex = 5;
-        //char = 'G';
         do {
             double a, b, c, x1, x2 = NAN;
 
@@ -29,17 +27,14 @@ int main (void)
             };
         } while (ex != 0);
         return 0;
-    } //
+    }
 }
 
 
 
 
-// Точность, выход, тесты, указатели
-//Разделить на хедеры, цикл для выхода, юнитест доделать, условная компиляция, аутпут отдельный
 
-/*scanf ("%s", input_str);
-if (scanf ("%s", input_str) != 1) {
-printf("\nError input\n");
-return 0;*/
+//логику упросить(isNAN), рефакторинг программы, switch для oneTest
+//указатели массивы структуры, scanf, тернарник, infdef, typedef: читать
+//makefile, условная компиляция,
 

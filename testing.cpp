@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <math.h>
-#include "zero.h"
 #include "square.h"
 
+const int ONE = 1;
+const int TWO = 2;
+const int NO = 0; //enum
+const int INF = -1;
+
 typedef struct {
-    //char *name; //SEX
     double a, b, c;
     double x1ref, x2ref;
     int numRootsRef;
@@ -14,23 +17,39 @@ typedef struct {
 int OneTest (testData test) {
 
     double x1 = NAN, x2 = NAN;
+    int mistakes = 0;
     int numRoots = solveSquareEquation(test.a, test.b, test.c, &x1, &x2);
 
-    if (!(isEqual(x1, test.x1ref)) || !(isEqual(x2, test.x2ref)) || numRoots != test.numRootsRef) {
+    switch (numRoots) {
+        case ONE:
+            if (!(isEqual(x1, test.x1ref))) {
+                mistakes += 1;
+            }
+                break;
 
-        if (isEqual(x1, test.x1ref) && !(isEqual(x2, x2)) && numRoots == test.numRootsRef) {
-            return 0;
-        }
+        case TWO:
+            if (!(isEqual(x1, test.x1ref)) || !(isEqual(x2, test.x2ref))) {
+                mistakes += 1;
+            }
+                break;
 
-        if (!(isEqual(x1, x1)) && !(isEqual(x2, x2)) && numRoots == test.numRootsRef) {
-            return 0;
-        }
+        case NO:
+            if (!(isnan(x1) && isnan(x2))) {
+                mistakes += 1;
+            }
+            break;
 
-        return 1;
+        case INF:
+            if (!(isnan(x1) && isnan(x2))) {
+                mistakes += 1;
+            }
+            break;
+
+        default: ;
+
     }
-    return 0;
+    return mistakes;
 }
-
 
 int allTests (void) {
 

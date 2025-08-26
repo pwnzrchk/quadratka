@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include "zero.h"
 #include "square.h"
 #include "testing.h"
 
@@ -16,8 +15,9 @@ void output(double a, double b, double c, double * x1, double *x2) {
     int m = 0;
     int nRoots = solveSquareEquation(a, b, c, x1, x2);
 
-    *x1 = zeroing(*x1);
-    *x2 = zeroing(*x2);
+
+    isEqual(*x1, 0) ? *x1 = 0 : *x1 = *x1;
+    isEqual(*x2, 0) ? *x2 = 0 : *x2 = *x2;
 
     switch (nRoots) {
 

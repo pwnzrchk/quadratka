@@ -77,5 +77,4 @@ int solveSquareEquation (double a, double b, double c, double * x1, double * x2)
     }
 }
 
-//is equal, zeroing, makefile, условная компиляция, логику упросить(isNAN), рефакторинг программы
-//указатели массивы структуры, scanf читать, infdef
+
