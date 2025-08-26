@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "SQUARE_H.h"
+#include "square.h"
 #include "TEST.h"
 
 int oneTest (double a, double b, double c, double x1ref, double x2ref, double numRootsref)

@@ -1,4 +1,4 @@
 #ifndef zero
 #define zero
-double zeroing(double a);
+    double zeroing(double a);
 #endif

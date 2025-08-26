@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "SQUARE_H.h"
+#include "square.h"
 
 const double e = 1.0e-10;
 const int ONE = 1;
@@ -44,7 +44,7 @@ int solveLinearEquation (double b, double c, double *x1)
     return NO;
 }
 
-int solveSquareEquation (double a, double b, double c, double *x1, double *x2)
+int solveSquareEquation (double a, double b, double c, double * x1, double * x2)
 {
     if (isEqual(a,0)) {
         return solveLinearEquation (b, c, x1);
