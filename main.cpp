@@ -20,18 +20,16 @@ int main (void)
             if (scanf ("%lf %lf %lf", &a, &b, &c) != 3) {
                 printf("Error input\n");
                 return 0;
-            }
-            else
+            } else {
                 output(a, b, c, &x1, &x2);                       //LINK - я не понимаю из названия то это делает
                 printf("Введите \"exit\" для выхода, или что-то другое для продолжения\n");
                 scanf("%99s", exitFlag);
                 if (!(strcmp(exitFlag, "exit"))) {
                     isExit = true;
                 }
-            } while (!isExit);
-        return 0;
-    }
-    else {
+            }
+        } while (!isExit);
+    } else {
         printf("Error test N%d", allTests());
         return 0;
     }
