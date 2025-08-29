@@ -10,9 +10,9 @@ typedef struct {
     double a, b, c;
     double x1ref, x2ref;
     int numRootsRef;
-} testData;
+} testData_t;
 
-int OneTest (testData test);
+int OneTest (testData_t test);
 int allTests (void);
 
 #endif
