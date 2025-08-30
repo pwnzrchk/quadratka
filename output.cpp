@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include "square.h"
 #include "testing.h"
 
@@ -22,35 +23,45 @@ void output(double a, double b, double c, double * x1, double *x2) {
 
         case ONE:
             printf("Введите кол-во цифр после точки (до 6)\n");
-            if (scanf("%d", &accuracy) != 1 || accuracy > 6 || accuracy < 0) {
-                printf("Error input\n");
+            char accuracy_read [20];
+            if ((fgets(accuracy_read, sizeof(accuracy_read), stdin) != NULL)) {
+                if (sscanf(accuracy_read, "%d", &accuracy) == 1 && accuracy <= 6 && accuracy >= 0) {
+                    printf ("x=%.*lf", accuracy, *x1);
+                    printf ("quantity of roots - %d\n\n", nRoots);
+                } else {
+                    printf("Error input\n");
+                }
             } else {
-                printf ("x=%.*lf\n", accuracy, *x1);
-                printf ("\nquantity of roots - %d\n", nRoots);
+                printf("Error read");
             }
             break;
 
         case TWO:
             printf("Введите кол-во цифр после точки (до 6)\n");
-            if (scanf("%d", &accuracy) != 1 || accuracy > 6 || accuracy < 0) {
-                printf("Error input\n");
+            char accuracy_READ [20];
+            if ((fgets(accuracy_READ, sizeof(accuracy_READ), stdin) != NULL)) {
+                if (sscanf(accuracy_READ, "%d", &accuracy) == 1 && accuracy <= 6 && accuracy >= 0) {
+                    printf("x1=%.*lf, x2=%.*lf \n", accuracy, *x1, accuracy, *x2);
+                    printf ("quantity of roots - %d\n\n", nRoots);
+                } else {
+                    printf("Error input\n");
+                }
             } else {
-            printf("x1=%.*lf, x2=%.*lf \n", accuracy, *x1, accuracy, *x2);
-            printf("quantity of roots - %d\n", nRoots);
+                printf("Error read");
             }
             break;
 
 
         case NO:
-            printf ("there is no roots\n");
+            printf ("there is no roots\n\n");
             break;
 
         case INF:
-            printf ("infinity quantity if roots\n");
+            printf ("infinity quantity if roots\n\n");
             break;
 
-        default:
-            printf ("Error input\n");
+        default: ;
 
     }
+
 }

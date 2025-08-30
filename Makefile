@@ -12,7 +12,7 @@ CFLAGS = -Wall -std=c++17 -Wall -Wextra -Weffc++ -Wc++14-compat -Wmissing-declar
 		 -fstrict-overflow -fno-omit-frame-pointer -Wlarger-than=8192 -Wstack-protector  \
 		 -fPIE -Werror=vla
 
-SOURCE = square.cpp output.cpp testing.cpp
+SOURCE = square.cpp output.cpp testing.cpp parser.cpp
 OBJ = $(SOURCE:.cpp=.o)
 
 MAIN_SOURSE = main.cpp
