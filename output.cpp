@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "square.h"
 #include "testing.h"
+#include <assert.h>
 
 const int ONE = 1;
 const int TWO = 2;
@@ -16,7 +17,7 @@ void output(double a, double b, double c, double * x1, double *x2) {
     int nRoots = solveSquareEquation(a, b, c, x1, x2);
 
 
-    isEqual(*x1, 0) ? *x1 = 0 : *x1 = *x1;
+    *x1 = isEqual(*x1, 0) ? 0 : *x1;
     isEqual(*x2, 0) ? *x2 = 0 : *x2 = *x2;
 
     switch (nRoots) {
@@ -60,7 +61,8 @@ void output(double a, double b, double c, double * x1, double *x2) {
             printf ("infinity quantity if roots\n\n");
             break;
 
-        default: ;
+        default: assert(0 && "")
+            ;
 
     }
 

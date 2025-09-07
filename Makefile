@@ -10,7 +10,7 @@ CFLAGS = -Wall -std=c++17 -Wall -Wextra -Weffc++ -Wc++14-compat -Wmissing-declar
 		 -Wno-varargs -Wstack-protector -Wsuggest-override -Wbounds-attributes-redundant \
 		 -Wlong-long -Wopenmp -fcheck-new -fsized-deallocation -fstack-protector 		 \
 		 -fstrict-overflow -fno-omit-frame-pointer -Wlarger-than=8192 -Wstack-protector  \
-		 -fPIE -Werror=vla
+		 -fPIE -Werror=vla -fsanitize=address
 
 SOURCE = square.cpp output.cpp testing.cpp parser.cpp
 OBJ = $(SOURCE:.cpp=.o)
@@ -23,7 +23,7 @@ TST_O = $(TST:.cpp=.o)
 
 
 all: $(OBJ) $(MAIN_OBJ)
-	$(CC) $(OBJ) $(MAIN_OBJ) -o $@ -lm
+	$(CC) $(CFLAGS) $(OBJ) $(MAIN_OBJ)  -o $@ -lm
 
 test: $(OBJ) $(TST_O)
 	$(CC) $(CFLAGS) $^ -o $@ -lm
